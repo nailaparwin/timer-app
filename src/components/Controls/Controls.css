@@ -1,0 +1,57 @@
+
+.controls-container button{
+    margin: 10px;
+    border: none;
+    /* background-color:#E5AD3D; */
+    background-color: lightslategray;
+    border: solid 6px lightseagreen;
+    padding: 5px ;
+    font-size: 1.3rem;
+    cursor: pointer;
+    
+  }
+  
+  .controls-container{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 70%;             
+    flex-flow: row wrap;
+  }
+  
+  @media(min-width:576px) {
+    .controls-container {
+      flex-flow: row wrap;
+    }
+    .controls-container>.left {
+      order: 1;
+      flex: 0.5;
+    }
+    .controls-container>.right {
+      order: 3;
+      flex: 0.5;
+    }
+    .controls-container>.center {
+      order: 2;
+      width: 100%;
+    }
+  }
+  
+  @media(min-width:768px) {
+    .controls-container {
+      flex-flow: row nowrap;
+    }
+    .controls-container>section {
+      width: 33.33% !important;
+    }
+    .controls-container>.left {
+      order: 1;
+    }
+    .controls-container>.center {
+      order: 2;
+    }
+    .controls-container>.right {
+      order: 3;
+    }
+  }
